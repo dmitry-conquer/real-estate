@@ -1,3 +1,58 @@
+@import "../../node_modules/swiper/swiper.min.css";
+@import "../../node_modules/swiper/modules/navigation/navigation.min.css";
+@import "../../node_modules/swiper/modules/pagination/pagination.min.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-open text-base font-normal;
+  }
+  h1 {
+    @apply mb-[1.13rem] font-montserrat text-5xl font-semibold text-white max-lg:text-4xl max-sm:text-3xl;
+  }
+  h2 {
+    @apply text-center font-montserrat text-xl font-semibold uppercase leading-snug text-primary;
+  }
+  h3 {
+    @apply font-bold leading-[1.6];
+  }
+}
+
+@layer components {
+  .main-header {
+    @apply container flex min-h-[8.5rem] items-center gap-3 max-lg:min-h-[8rem] max-md:min-h-[6rem] max-sm:min-h-[4.5rem] lg:justify-between;
+  }
+  .header-link {
+    @apply leading-normal text-white transition-colors hover:text-primary max-lg:text-xl max-lg:font-bold max-lg:text-black;
+  }
+  .primary-btn {
+    @apply rounded-md bg-primary px-[1.75rem] py-[0.8rem] leading-normal text-white transition-all hover:bg-primary/80;
+  }
+  .about-img {
+    @apply h-[3.75rem] w-[3.75rem] shrink-0 max-md:h-[3rem] max-md:w-[3rem];
+  }
+  .about-item {
+    @apply flex items-center gap-3 max-sm:flex-col max-sm:items-center max-sm:text-center;
+  }
+  .slider {
+    @apply -m-4  w-full overflow-hidden  p-4;
+  }
+  .slider-wrap {
+    @apply flex items-center h-[35rem];
+  }
+  .slide {
+    @apply flex h-[31rem] shrink-0 flex-col items-center px-[1.87rem] py-[6.25rem] text-center shadow-[0_1px_6px_0px_rgba(0,0,0,0.20)] transition-all duration-300;
+  }
+}
+
+.swiper-slide-active {
+  @apply h-[35rem]  bg-primary text-white;
+}
+.swiper-slide-active svg path {
+  @apply fill-white;
+}

@@ -20,5 +20,8 @@
     "vite": "^4.4.0",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-html": "^3.2.0"
+  },
+  "dependencies": {
+    "swiper": "^8.4.6"
   }
 }
