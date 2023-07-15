@@ -17,6 +17,7 @@ export default {
       secondary: "#BB6152",
       black: "#000000",
       white: "#fff",
+      gray: "#F6F5F5",
     },
     fontSize: {
       sm: "0.8rem",

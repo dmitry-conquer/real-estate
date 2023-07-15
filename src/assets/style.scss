@@ -2,13 +2,16 @@
 @import "../../node_modules/swiper/modules/navigation/navigation.min.css";
 @import "../../node_modules/swiper/modules/pagination/pagination.min.css";
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans:wght@300;400&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
   body {
     @apply font-open text-base font-normal;
   }
@@ -16,7 +19,7 @@
     @apply mb-[1.13rem] font-montserrat text-5xl font-semibold text-white max-lg:text-4xl max-sm:text-3xl;
   }
   h2 {
-    @apply text-center font-montserrat text-xl font-semibold uppercase leading-snug text-primary;
+    @apply mb-[2.19rem] text-center font-montserrat text-xl font-semibold uppercase leading-snug text-primary;
   }
   h3 {
     @apply mb-[0.6rem] font-bold leading-[1.6];
@@ -27,8 +30,8 @@
   .bg-img {
     @apply absolute left-0 top-0 -z-10 h-full w-full object-cover;
   }
-  .main-header {
-    @apply container flex min-h-[8.5rem] items-center gap-3 max-lg:min-h-[8rem] max-md:min-h-[6rem] max-sm:min-h-[4.5rem] lg:justify-between;
+  .header-inner {
+    @apply container flex min-h-[8.5rem] items-center gap-3 max-lg:min-h-[8rem] max-md:min-h-[6rem] max-sm:min-h-[5rem]  lg:justify-between;
   }
   .header-link {
     @apply leading-normal text-white transition-colors hover:text-primary max-lg:text-xl max-lg:font-bold max-lg:text-black;
@@ -92,8 +95,18 @@
 */
 
 .number-label {
-  @apply mb-4 flex h-[2.5rem] w-[2.5rem] items-center justify-center rounded-full bg-primary text-md leading-tight text-white relative z-10;
+  @apply relative z-10 mb-4 flex h-[2.5rem] w-[2.5rem] items-center justify-center rounded-full bg-primary text-md leading-tight text-white;
 }
 .road {
-  @apply h-[20rem] w-full rounded-r-full border-y-4 border-r-4 border-primary absolute left-4 top-[8.5rem];
+  @apply pointer-events-none absolute left-5 top-[9.3rem] h-[20rem] w-full rounded-r-full border-y-4 border-r-4 border-primary max-xl:h-[21.5rem];
+}
+
+/*
+  form
+*/
+.contacts {
+  @apply grid items-center gap-[6rem] pl-[calc((100vw-1200px)/2)] max-lg:gap-[2rem] max-sm:grid-cols-1 max-sm:pt-section sm:grid-cols-[300px_1fr] md:pl-[calc((100vw-768px)/2)] lg:pl-[calc((100vw-1024px)/2)];
+}
+.input {
+  @apply h-[3.125rem] rounded-md border border-primary px-[1.25rem] leading-normal outline-none focus:ring-1 focus:ring-primary sm:w-1/3;
 }

@@ -5,12 +5,17 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <script type="module" src="main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Real Estate</title>
+    <meta name="title" content="RealEstate - Агентство нерухомості">
+    <meta name="description" content="Допоможемо безпечно продати чи купити квартиру в срок від 28 днівПовний комплекс рієлторських послуг у Києві та Київській області">
+    <meta name="keywords" content="RealEstate, нерухомість, квартири">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Real Estate - Агентство нерухомості</title>
   </head>
   <body class="">
-    <div class="overflow-hidden">
-      <section class="fixed left-0 top-0 z-50 w-full max-sm:bg-white">
-        <header class="main-header">
+    <div class="min-h-full overflow-hidden">
+      <header class="fixed left-0 top-0 z-50 w-full transition-all max-sm:bg-white">
+        <div class="header-inner">
           <a href="#" class="flex flex-col items-center space-y-2 max-lg:mr-auto">
             <svg class="h-8 w-8">
               <use href="images/svg/sprite.svg#logo-icon"></use>
@@ -19,29 +24,32 @@
           </a>
           <nav
             id="header-navigation"
-            class="relative text-center transition-all max-lg:fixed max-lg:right-[-100%] max-lg:top-0 max-lg:h-screen max-lg:w-[20rem] max-lg:bg-white max-lg:pt-[3.5rem]">
-            <button id="close-menu" class="absolute left-3 top-3 h-6 w-6 lg:hidden" type="button">
-              <img src="images/svg/cross.svg" alt="close menu" />
+            class="relative text-center transition-all max-lg:fixed max-lg:right-[-100%] max-lg:top-0 max-lg:h-screen max-lg:w-[20rem] max-lg:bg-white max-lg:px-12 max-lg:pt-[3.5rem]">
+            <button id="close-menu" class="absolute left-3 top-3 lg:hidden" type="button">
+              <svg class="h-7 w-7">
+                <use href="images/svg/sprite.svg#cross-icon"></use>
+              </svg>
             </button>
             <ul class="flex gap-[3rem] max-lg:flex-col max-lg:gap-3">
               <li>
-                <a class="header-link" href="#">Головна</a>
+                <a class="header-link" href="#hero">Головна</a>
               </li>
               <li>
-                <a class="header-link" href="#">Послуги</a>
+                <a class="header-link" href="#services">Послуги</a>
               </li>
               <li>
-                <a class="header-link" href="#">Про компанію</a>
+                <a class="header-link" href="#about">Про компанію</a>
               </li>
               <li>
-                <a class="header-link" href="#">Залишити заявку</a>
+                <a class="header-link" href="#callback">Залишити заявку</a>
               </li>
               <li>
-                <a class="header-link" href="#">Контакти</a>
+                <a class="header-link" href="#contacts">Контакти</a>
               </li>
             </ul>
+            <a href="#callback" class="primary-btn mt-4 block sm:hidden">Залишити заявку</a>
           </nav>
-          <button class="primary-btn max-sm:hidden" type="button">Залишити заявку</button>
+          <a href="#callback" class="primary-btn block max-sm:hidden">Залишити заявку</a>
           <button id="open-menu" class="ml-4 hidden text-white max-lg:flex" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -55,21 +63,23 @@
                 d="M5 8h22M5 16h22M5 24h22" />
             </svg>
           </button>
-        </header>
-      </section>
-      <section class="relative min-h-screen">
+        </div>
+      </header>
+      <section class="relative min-h-screen" id="hero">
         <img src="images/hero-bg.webp" alt="hero background" class="bg-img" />
         <div class="container flex min-h-screen flex-col items-center justify-center text-center">
           <h1>Допоможемо безпечно продати чи купити квартиру в срок від 28 днів</h1>
           <p class="mb-[2.25rem] font-montserrat font-bold leading-tight text-white">
-            Повний комплекс рієлторських послуг у Києві та Київськиій області
+            Повний комплекс рієлторських послуг у Києві та Київській області
           </p>
-          <button class="primary-btn" type="button">Отримати консультацію</button>
+          <a href="#callback" class="primary-btn">Отримати консультацію</a>
         </div>
       </section>
-      <section class="container flex divide-x-[3px] divide-primary py-section max-md:flex-col max-md:space-y-20">
+      <section
+        class="container flex divide-primary py-section max-md:flex-col max-md:space-y-20 md:divide-x-[3px]"
+        id="services">
         <div class="basis-1/2 pr-[8rem] max-lg:pr-8 max-md:pr-0">
-          <h2 class="mb-8">продавцям</h2>
+          <h2>продавцям</h2>
           <ul class="space-y-[2rem]">
             <li class="about-item">
               <svg class="h-12 w-12">
@@ -110,7 +120,7 @@
           </ul>
         </div>
         <div class="basis-1/2 pl-[8rem] max-lg:pl-8 max-md:pl-0">
-          <h2 class="mb-8">покупцям</h2>
+          <h2>покупцям</h2>
           <ul class="space-y-[1.75rem]">
             <li class="about-item">
               <svg class="h-12 w-12">
@@ -151,8 +161,8 @@
           </ul>
         </div>
       </section>
-      <section class="container py-section">
-        <h2 class="mb-[2.2rem] text-center">що ми можемо</h2>
+      <section class="container py-section" id="help">
+        <h2 class="text-center">що ми можемо</h2>
         <div class="flex items-center max-sm:block">
           <button class="navigation-btn prev" type="button" aria-label="Попередній слайд">
             <svg class="">
@@ -319,16 +329,13 @@
           </button>
         </div>
       </section>
-      <div class="relative">
+      <section class="relative" id="how-we-work">
         <img src="images/about-bg.webp" alt="background image" class="bg-img" />
-        <section class="container py-section relative">
+        <div class="container relative py-section">
           <h2>Як ми працюємо</h2>
-          <div>
-            <button class="" type="button">Продавцям</button>
-            <button class="" type="button">Покупцям</button>
-          </div>
-          <div class="grid grid-cols-3 gap-x-[3.25rem] gap-y-[8rem]">
-            <span class="road"></span>
+          <div
+            class="grid grid-cols-3 gap-x-[3.25rem] gap-y-[8rem] max-lg:gap-y-[3.5rem] max-md:grid-cols-2 max-sm:grid-cols-1">
+            <span class="road max-md:hidden"></span>
             <div>
               <span class="number-label">1</span>
               <h3 class="">Знайдіть собі квартиру</h3>
@@ -353,7 +360,7 @@
                 існують та знятих обмежень
               </p>
             </div>
-            <div>
+            <div class="max-sm:row-start-6 max-sm:row-end-7">
               <span class="number-label">6</span>
               <h3 class="">Надамо рекомендації щодо проведення угоди</h3>
               <p>
@@ -361,7 +368,8 @@
                 який також захищає права покупця
               </p>
             </div>
-            <div>
+            <div
+              class="max-md:col-start-1 max-md:col-end-2 max-md:row-start-3 max-md:row-end-4 max-sm:row-start-5 max-sm:row-end-6">
               <span class="number-label">5</span>
               <h3 class="">Переконаємося у порядності продавця</h3>
               <p>
@@ -370,7 +378,7 @@
                 перебував на психо- або нарко-диспансерному обліку. тим, хто «не усвідомив своїх дій»
               </p>
             </div>
-            <div>
+            <div class="sm:max-md:col-start-2 sm:max-md:col-end-3 sm:max-md:row-start-2 sm:max-md:row-end-3">
               <span class="number-label">4</span>
               <h3>З'ясуємо хроніку проживання</h3>
               <p>
@@ -379,8 +387,143 @@
               </p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section class="container py-section" id="about">
+        <h2>Про компанію</h2>
+        <div class="flex items-start gap-[5.56rem] max-xl:gap-[3rem] max-lg:flex-col-reverse">
+          <div class="h-full w-full max-lg:h-[10rem] lg:w-1/2">
+            <img src="images/img1.webp" alt="image" class="block h-full w-full object-cover" />
+          </div>
+          <div class="flex h-full flex-col lg:w-1/2">
+            <p class="mb-[0.87rem] font-montserrat text-3xl leading-tight max-sm:text-center max-sm:text-xl">
+              RealEstate - агентство нерухомості, якому можна довіряти!
+            </p>
+            <div class="space-y-10">
+              <p>
+                Компанія працює з 2008 року у місті Корольов. Надаємо послуги по всій Росії - працюємо в online-форматі.
+                Наше агентство є сертифікованим, оскільки входить до Гільдії ріелторів Московської області та Російської
+                Гільдії Ріелторів.
+              </p>
+              <p>
+                Діяльність сертифікованого агентства застрахована. Не всі знають, але угоду з купівлі квартири можуть
+                визнати недійсною, якщо її продавець став банкрутом за рік до продажу.
+              </p>
+              <p>
+                Тоді суд забирає нерухомість, щоб сплатити його борги. А покупець залишається без грошей, і без
+                квартири. У нашому агентстві такі ситуації виключені – у будь-якому разі страхова компанія відшкодує
+                збитки.
+              </p>
+              <p>
+                Усі співробітники сертифікованого агентства повинні регулярно навчатися та складати кваліфікаційні
+                іспити. Ви можете бути впевнені, що з вами працюватимуть професіонали. Сертифікована агенція гарантує
+                надання якісних послуг. І несе відповідальність за кожну угоду, на відміну від несертифікованих
+                організацій
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray py-section" id="callback">
+        <div class="container">
+          <h2 class="sr-only">Зв'язок</h2>
+          <div class="grid items-center gap-[3.75rem] max-lg:gap-[2rem] lg:grid-cols-[21rem_1fr]">
+            <div>
+              <p class="mb-[0.63rem] text-3xl leading-tight max-md:text-center max-md:text-xl">
+                Передзвонимо Вам протягом <span class="text-primary">30</span> хвилин!
+              </p>
+              <p class="leading-6 max-md:text-center">Консультація безкоштовна</p>
+            </div>
+            <form action="#" class="space-y-[1.25rem]">
+              <div class="flex gap-6 max-sm:flex-col">
+                <input class="input" type="text" placeholder="Ім'я" />
+                <input class="input" type="text" inputmode="tel" placeholder="Телефон" />
+                <input class="input" type="email" inputmode="email" placeholder="Пошта" />
+              </div>
+              <div class="">
+                <label class="flex items-center gap-3 max-md:justify-center">
+                  <input type="checkbox" class="accent-primary" />
+                  <span>Згоден на обробку персональних даних</span></label
+                >
+              </div>
+              <button class="primary-btn block max-md:mx-auto" type="button">Отримати консультацію</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="contacts" id="contacts">
+        <dl class="space-y-3 pl-4 md:text-md">
+          <div>
+            <dt class="font-light">Адреса:</dt>
+            <dd class="font-montserrat font-medium">
+              <address class="not-italic">м. Київ, вул. Гарматна 51А</address>
+            </dd>
+          </div>
+          <div>
+            <dt class="font-light">Телефон:</dt>
+            <dd class="font-montserrat font-medium"><a href="tel:+0663169192">+ (066) 316-91-92</a></dd>
+          </div>
+          <div>
+            <dt class="font-light">E-mail:</dt>
+            <dd class="font-montserrat font-medium"><a href="mailto:fake@mail.dev">fake@mail.dev</a></dd>
+          </div>
+        </dl>
+        <img src="images/2.webp" alt="image" class="object-cover" />
+      </section>
+      <footer class="bg-gray pb-[2.3rem] pt-[5rem]">
+        <div class="container space-y-10">
+          <div class="flex items-center justify-between gap-20 max-sm:flex-col max-sm:gap-10">
+            <a href="#" class="flex flex-col items-center space-y-2 max-lg:mr-auto">
+              <svg class="h-8 w-8">
+                <use href="images/svg/sprite.svg#logo-icon"></use>
+              </svg>
+              <span class="text-xl font-bold text-secondary max-md:text-md">RealEstate</span>
+            </a>
+            <nav class="relative text-center">
+              <ul class="flex flex-wrap gap-x-[3rem] gap-y-3">
+                <li>
+                  <a class="text-black" href="#hero">Головна</a>
+                </li>
+                <li>
+                  <a class="text-black" href="#services">Послуги</a>
+                </li>
+                <li>
+                  <a class="text-black" href="#about">Про компанію</a>
+                </li>
+                <li>
+                  <a class="text-black" href="#callback">Залишити заявку</a>
+                </li>
+                <li>
+                  <a class="text-black" href="#contacts">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="flex w-full max-sm:flex-col max-sm:gap-10 sm:items-center">
+            <a href="#" class="mr-auto text-sm text-black/70 underline">Політика конфіденційності</a>
+            <div class="flex items-center gap-6">
+              <a class="montserrat font-medium hover:underline" href="tel:+0663169192">+ (066) 316-91-92</a>
+              <ul class="flex gap-2">
+                <li>
+                  <a href="#" class="group">
+                    <svg class="h-8 w-8 fill-primary transition-colors group-hover:fill-primary/80">
+                      <use href="images/svg/sprite.svg#whatsup"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="group">
+                    <svg class="h-8 w-8 fill-primary transition-colors group-hover:fill-primary/80">
+                      <use href="images/svg/sprite.svg#telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="text-sm font-light text-black/70">© 2023 Компанія RealEstate — Агентство нерухомості</p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
