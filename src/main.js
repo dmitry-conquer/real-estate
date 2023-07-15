@@ -1,4 +1,4 @@
-import "./assets/style.css";
+import "./assets/style.scss";
 import { initSliders } from "./modules/sliders";
 
 function app() {

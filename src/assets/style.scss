@@ -19,11 +19,14 @@
     @apply text-center font-montserrat text-xl font-semibold uppercase leading-snug text-primary;
   }
   h3 {
-    @apply font-bold leading-[1.6];
+    @apply mb-[0.6rem] font-bold leading-[1.6];
   }
 }
 
 @layer components {
+  .bg-img {
+    @apply absolute left-0 top-0 -z-10 h-full w-full object-cover;
+  }
   .main-header {
     @apply container flex min-h-[8.5rem] items-center gap-3 max-lg:min-h-[8rem] max-md:min-h-[6rem] max-sm:min-h-[4.5rem] lg:justify-between;
   }
@@ -33,6 +36,9 @@
   .primary-btn {
     @apply rounded-md bg-primary px-[1.75rem] py-[0.8rem] leading-normal text-white transition-all hover:bg-primary/80;
   }
+  .secondary-btn {
+    @apply rounded-md bg-white px-[1.75rem] py-[0.8rem] leading-normal text-black transition-all hover:bg-white/80 max-sm:text-sm;
+  }
   .about-img {
     @apply h-[3.75rem] w-[3.75rem] shrink-0 max-md:h-[3rem] max-md:w-[3rem];
   }
@@ -40,19 +46,54 @@
     @apply flex items-center gap-3 max-sm:flex-col max-sm:items-center max-sm:text-center;
   }
   .slider {
-    @apply -m-4  w-full overflow-hidden  p-4;
+    @apply -m-4  w-full overflow-hidden p-4 max-sm:m-0 max-sm:overflow-visible max-sm:p-0;
   }
   .slider-wrap {
-    @apply flex items-center h-[35rem];
+    @apply flex h-[35rem] items-center;
   }
   .slide {
     @apply flex h-[31rem] shrink-0 flex-col items-center px-[1.87rem] py-[6.25rem] text-center shadow-[0_1px_6px_0px_rgba(0,0,0,0.20)] transition-all duration-300;
   }
 }
 
+/*
+  slider
+*/
+
 .swiper-slide-active {
-  @apply h-[35rem]  bg-primary text-white;
+  @apply h-[35rem] bg-primary text-white;
+  svg path {
+    @apply fill-white;
+  }
+  button {
+    @apply block;
+  }
 }
-.swiper-slide-active svg path {
-  @apply fill-white;
+.pagination {
+  .swiper-pagination-bullet {
+    @apply h-3 w-3 bg-primary;
+  }
+}
+.navigation-btn {
+  @apply max-sm:hidden;
+  svg {
+    @apply h-7 w-5;
+  }
+  &.prev {
+    @apply block -translate-x-11 rotate-180;
+  }
+  &.next {
+    @apply translate-x-11;
+  }
+}
+
+/*
+  how we work
+*/
+
+.number-label {
+  @apply mb-4 flex h-[2.5rem] w-[2.5rem] items-center justify-center rounded-full bg-primary text-md leading-tight text-white relative z-10;
+}
+.road {
+  @apply h-[20rem] w-full rounded-r-full border-y-4 border-r-4 border-primary absolute left-4 top-[8.5rem];
 }

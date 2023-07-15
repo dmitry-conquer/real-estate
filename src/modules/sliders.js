@@ -7,46 +7,44 @@ export function initSliders() {
       wrapperClass: "slider-wrap",
       slideClass: "slide",
       slidesPerView: 3,
-      spaceBetween: 75,
       speed: 800,
-      observer: true,
-      observeParents: true,
+      slideToClickedSlide: true,
       loop: true,
-      centeredSlides: true,
 
       // Pagination
-      // pagination: {
-      //    el: '.slider-default__pagination',
-      //    clickable: true,
-      // },
+      pagination: {
+        el: ".pagination",
+        clickable: true,
+      },
 
       // Navigation
-      // navigation: {
-      //    prevEl: '.slider-default__button_prev',
-      //    nextEl: '.slider-default__button_next',
-      // },
+      navigation: {
+        prevEl: ".prev",
+        nextEl: ".next",
+      },
 
       // Breakpoints
-      /*
-         breakpoints: {
-            320: {
-               slidesPerView: 1,
-               spaceBetween: 0,
-            },
-            576: {
-               slidesPerView: 1,
-               spaceBetween: 0,
-            },
-            768: {
-               slidesPerView: 2,
-               spaceBetween: 20,
-            },
-            992: {
-               slidesPerView: 3,
-               spaceBetween: 20,
-            },
-         },
-         */
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          centeredSlides: false,
+          spaceBetween: 40,
+        },
+        450: {
+          slidesPerView: 1.2,
+          spaceBetween: 40,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+        1200: {
+          spaceBetween: 75,
+          centeredSlides: true,
+        },
+      },
     });
   }
 }
